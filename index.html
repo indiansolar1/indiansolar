@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indian Solar | Solar Energy Solutions</title>
+  <meta name="description" content="Indian Solar provides rooftop solar solutions for homes and businesses. Get a free solar quote today." />
+  <style>
+    :root{--navy:#06234a;--blue:#0b5ed7;--yellow:#f7c948;--light:#f5f9ff;--text:#172033;--muted:#64748b;--white:#fff;--border:#e5eaf1}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:25px;font-weight:900;color:var(--navy);letter-spacing:-1px}
+    .logo span{color:var(--yellow)}
+    .links{display:flex;gap:28px;align-items:center;font-weight:650;color:#334155}
+    .links a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:10px;font-weight:800;border:0;cursor:pointer;transition:.2s}
+    .btn-primary{background:var(--yellow);color:#172033}.btn-primary:hover{transform:translateY(-2px)}
+    .btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:#084eae}
+    .hero{background:linear-gradient(135deg,#f4f9ff 0%,#fff 55%,#eef7ff 100%);padding:78px 0 60px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-block;background:#fff4c9;color:#765900;padding:7px 12px;border-radius:99px;font-size:13px;font-weight:850;margin-bottom:18px}
+    h1{font-size:clamp(42px,5vw,68px);line-height:1.04;letter-spacing:-2.5px;color:var(--navy);margin-bottom:20px}
+    h1 span{color:var(--blue)}
+    .hero p{font-size:18px;color:var(--muted);max-width:590px;margin-bottom:28px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .trust{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px;color:#526071;font-size:14px;font-weight:700}
+    .trust span::before{content:"✓";color:#16803b;margin-right:7px}
+    .hero-image{min-height:430px;border-radius:28px;background:url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1200&q=85") center/cover;box-shadow:0 25px 70px rgba(6,35,74,.18);position:relative}
+    .floating{position:absolute;left:-20px;bottom:22px;background:#fff;padding:16px 18px;border-radius:15px;box-shadow:0 12px 35px rgba(6,35,74,.16);font-weight:800}
+    .floating small{display:block;color:var(--muted);font-weight:600}
+    section{padding:78px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+    .section-head h2{font-size:38px;line-height:1.1;color:var(--navy);margin-bottom:12px;letter-spacing:-1px}
+    .section-head p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{border:1px solid var(--border);border-radius:20px;padding:28px;background:#fff;box-shadow:0 8px 30px rgba(15,23,42,.04)}
+    .icon{width:50px;height:50px;border-radius:14px;background:#eaf3ff;display:grid;place-items:center;font-size:25px;margin-bottom:18px}
+    .card h3{color:var(--navy);margin-bottom:8px;font-size:21px}.card p{color:var(--muted)}
+    .products{background:var(--light)}
+    .product{padding:0;overflow:hidden}.product-img{height:180px;background-size:cover;background-position:center}
+    .product-body{padding:24px}.product-body h3{color:var(--navy);margin-bottom:7px}
+    .calculator{background:var(--navy);color:#fff;border-radius:28px;padding:42px}
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .calculator h2{font-size:38px;line-height:1.1;margin-bottom:12px}.calculator p{color:#c8d4e5}
+    .form-box{background:#fff;border-radius:18px;padding:24px;color:var(--text)}
+    label{font-size:13px;font-weight:800;display:block;margin-bottom:7px}
+    input,select{width:100%;padding:13px 14px;border:1px solid #d7dee8;border-radius:9px;margin-bottom:15px;font:inherit}
+    .estimate{background:#eef7ff;border-radius:12px;padding:14px;margin:4px 0 16px;font-weight:750;color:var(--navy)}
+    .quote{background:#f8fafc}
+    .quote-grid{display:grid;grid-template-columns:1fr .85fr;gap:30px;align-items:start}
+    .quote-copy h2{font-size:40px;line-height:1.1;color:var(--navy);margin-bottom:14px}
+    .quote-copy p{color:var(--muted);margin-bottom:20px}
+    .contact-list{display:grid;gap:12px}.contact-list div{padding:14px;background:#fff;border-radius:12px;border:1px solid var(--border)}
+    .testimonial{background:#fff}.stars{color:#e8ad00;letter-spacing:2px;margin-bottom:8px}
+    .cta{background:linear-gradient(120deg,var(--blue),var(--navy));color:#fff;text-align:center;border-radius:28px;padding:55px 20px}
+    .cta h2{font-size:42px;line-height:1.1;margin-bottom:12px}.cta p{color:#dce8f7;margin-bottom:22px}
+    footer{background:#03182f;color:#c7d4e5;padding:50px 0 25px}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px;margin-bottom:35px}
+    footer h3,footer h4{color:#fff;margin-bottom:12px}.footer-links{display:grid;gap:8px}.footer-links a:hover{color:#fff}
+    .copyright{border-top:1px solid #18324f;padding-top:20px;font-size:13px;text-align:center}
+    .mobile-menu{display:none}
+    @media(max-width:800px){
+      .links{display:none}.mobile-menu{display:block}
+      .hero{padding-top:50px}.hero-grid,.calc-grid,.quote-grid{grid-template-columns:1fr}
+      .hero-image{min-height:330px}.floating{left:15px}.cards{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}.calculator{padding:28px}
+      .section-head h2,.quote-copy h2{font-size:32px}.cta h2{font-size:34px}
+    }
+    @media(max-width:520px){.footer-grid{grid-template-columns:1fr}.btn{width:100%}.actions{display:grid}.hero h1{font-size:43px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#">Indian<span>Solar</span></a>
+      <div class="links">
+        <a href="#solutions">Solutions</a><a href="#products">Products</a><a href="#calculator">Savings</a><a href="#about">Why Us</a><a href="#contact">Contact</a>
+        <a class="btn btn-blue" href="#quote">Get Free Quote</a>
+      </div>
+      <button class="btn btn-blue mobile-menu" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get Quote</button>
+    <a href="tel:+917830906631" class="phone-link">📞 +91 96348 89786</a>
+</nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">☀️ Clean energy for a brighter tomorrow</div>
+      <h1>Power Your Home With <span>Solar Energy.</span></h1>
+      <p>Reduce your electricity costs with reliable rooftop solar solutions designed for Indian homes and businesses.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#quote">Get Free Solar Quote →</a>
+        <!-- Replace the number below with your real business number -->
+        <a class="btn btn-blue" href="tel:+917830906631">📞 Call Indian Solar</a>
+      </div>
+      <div class="trust"><span>Quality products</span><span>Professional installation</span><span>Support</span></div>
+    </div>
+    <div class="hero-image">
+      <div class="floating">☀️ Smart solar investment<small>Get a free estimate today</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="solutions">
+  <div class="container">
+    <div class="section-head"><h2>Solar Solutions For Every Need</h2><p>From your home rooftop to large commercial projects, Indian Solar helps you move toward dependable clean energy.</p></div>
+    <div class="cards">
+      <div class="card"><div class="icon">🏠</div><h3>Residential Solar</h3><p>Rooftop solar systems tailored to your home's electricity needs and roof space.</p></div>
+      <div class="card"><div class="icon">🏢</div><h3>Commercial Solar</h3><p>Reduce operating costs with efficient solar solutions for offices, shops and businesses.</p></div>
+      <div class="card"><div class="icon">🏭</div><h3>Industrial Solar</h3><p>Scalable solar installations for factories, warehouses and high-energy facilities.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head"><h2>Complete Solar Solutions</h2><p>One place for the equipment and service you need to build a dependable solar system.</p></div>
+    <div class="cards">
+      <div class="card product"><div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><h3>Solar Panels</h3><p>High-quality panels for efficient rooftop energy generation.</p></div></div>
+      <div class="card product"><div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><h3>Solar Inverters</h3><p>Reliable power conversion and smart system management.</p></div></div>
+      <div class="card product"><div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1558449033-9cf6c4d0d5a4?auto=format&fit=crop&w=900&q=80')"></div><div class="product-body"><h3>Complete Installation</h3><p>Professional installation, commissioning and after-sales support.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator">
+  <div class="container">
+    <div class="calculator">
+      <div class="calc-grid">
+        <div><h2>See Your Solar Potential</h2><p>Enter your average monthly electricity bill for a simple starting estimate. A final system recommendation should be based on your actual site and electricity usage.</p></div>
+        <div class="form-box">
+          <label for="bill">Average monthly electricity bill (₹)</label>
+          <input id="bill" type="number" min="0" value="3000" oninput="calculate()" />
+          <div class="estimate" id="estimate">Estimated system size: 2.5–3 kW</div>
+          <a class="btn btn-blue" style="width:100%" href="#quote">Get Detailed Solar Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head"><h2>Why Choose Indian Solar?</h2><p>We aim to make the move to solar simple, transparent and dependable.</p></div>
+    <div class="cards">
+      <div class="card"><div class="icon">✓</div><h3>Quality First</h3><p>We focus on dependable solar equipment and careful system design.</p></div>
+      <div class="card"><div class="icon">🛠️</div><h3>Professional Service</h3><p>From site assessment to installation, we keep the process straightforward.</p></div>
+      <div class="card"><div class="icon">🤝</div><h3>Long-Term Support</h3><p>We help customers understand and maintain their solar investment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><h2>What Our Customers Say</h2><p>Replace these sample testimonials with verified customer reviews before publishing.</p></div>
+    <div class="cards">
+      <div class="card"><div class="stars">★★★★★</div><p>“The team explained the solar system clearly and made the installation process easy.”</p><br><strong>Sample Customer</strong></div>
+      <div class="card"><div class="stars">★★★★★</div><p>“A clean, professional experience from enquiry to installation.”</p><br><strong>Sample Customer</strong></div>
+      <div class="card"><div class="stars">★★★★★</div><p>“We wanted a simple solar solution and got helpful guidance throughout.”</p><br><strong>Sample Customer</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="container quote-grid">
+    <div class="quote-copy">
+      <h2>Get Your Free Solar Quote</h2>
+      <p>Leave your details and Indian Solar can contact you about your solar requirements.</p>
+      <div class="contact-list">
+        <div>📞 <strong>Call:</strong> Replace with your business number</div>
+        <div>💬 <strong>WhatsApp:</strong> Replace with your WhatsApp number</div>
+        <div>📍 <strong>Service Area:</strong> India</div>
+      </div>
+    </div>
+    <div class="form-box">
+      <form onsubmit="submitQuote(event)">
+        <label>Name</label><input id="name" required placeholder="Your name" />
+        <label>Mobile number</label><input id="phone" required inputmode="tel" placeholder="10-digit mobile number" pattern="[0-9]{10}" />
+        <label>City</label><input id="city" required placeholder="Your city" />
+        <label>Monthly electricity bill</label><input id="quoteBill" type="number" min="0" placeholder="₹ e.g. 3000" />
+        <label>Property type</label>
+        <select id="type"><option>Residential</option><option>Commercial</option><option>Industrial</option><option>Agricultural</option></select>
+        <button class="btn btn-blue" style="width:100%" type="submit">Send My Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to Switch to Solar?</h2>
+      <p>Talk to Indian Solar and take the first step toward cleaner, smarter energy.</p>
+      <a class="btn btn-primary" href="#quote">Get Free Quote →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h3>Indian<span style="color:var(--yellow)">Solar</span></h3><p>Clean, dependable solar solutions for homes and businesses.</p></div>
+      <div><h4>Company</h4><div class="footer-links"><a href="#about">About Us</a><a href="#solutions">Solutions</a><a href="#products">Products</a></div></div>
+      <div><h4>Support</h4><div class="footer-links"><a href="#quote">Get a Quote</a><a href="#contact">Contact</a><a href="#calculator">Solar Savings</a></div></div>
+      <div><h4>Contact</h4><div class="footer-links"><a href="tel:+917830906631">Call Us</a><a href="#quote">WhatsApp</a><a href="#quote">Enquiry</a></div></div>
+    </div>
+    <div class="copyright">© 2026 Indian Solar. All rights reserved.</div>
+  </div>
+<div class="footer-contact">📞 <a href="tel:+919634889786">+91 96348 89786</a> &nbsp; | &nbsp; ✉️ <a href="mailto:indiansolar366@gmail.com">indiansolar366@gmail.com</a></div>
+</footer>
+
+<script>
+function submitQuote(e){
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim().replace(/\D/g,'');
+  const city = document.getElementById('city').value.trim();
+  const bill = document.getElementById('quoteBill').value || 'Not provided';
+  const type = document.getElementById('type').value;
+
+  if(!/^[6-9]\d{9}$/.test(phone)){
+    alert('Please enter a valid 10-digit Indian mobile number.');
+    return false;
+  }
+
+  const text =
+    'New Indian Solar Enquiry\n\n' +
+    'Name: ' + name + '\n' +
+    'Mobile: ' + phone + '\n' +
+    'City: ' + city + '\n' +
+    'Monthly Bill: ₹' + bill + '\n' +
+    'Property Type: ' + type;
+
+  window.open(
+    'https://wa.me/919634889786?text=' + encodeURIComponent(text),
+    '_blank'
+  );
+
+  window.location.href =
+    'mailto:indiansolar366@gmail.com?subject=' +
+    encodeURIComponent('New Solar Enquiry - Indian Solar') +
+    '&body=' + encodeURIComponent(text);
+
+  return false;
+}
+</script>
+</body>
+</html>
