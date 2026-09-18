@@ -174,9 +174,9 @@
       <h2>Get Your Free Solar Quote</h2>
       <p>Leave your details and Indian Solar can contact you about your solar requirements.</p>
       <div class="contact-list">
-        <div>📞 <strong>Call:</strong> Replace with your business number</div>
-        <div>💬 <strong>WhatsApp:</strong> Replace with your WhatsApp number</div>
-        <div>📍 <strong>Service Area:</strong> India</div>
+        <div>📞 <strong>Call:</strong> <a href="tel:+917830906631">+91 96348 89786</a></div>
+        <div>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/919634889786" target="_blank" rel="noopener">+91 96348 89786</a></div>
+        <div>📍 <strong>Service Area:</strong> Homes and businesses across India</div>
       </div>
     </div>
     <div class="form-box">
@@ -210,48 +210,48 @@
       <div><h3>Indian<span style="color:var(--yellow)">Solar</span></h3><p>Clean, dependable solar solutions for homes and businesses.</p></div>
       <div><h4>Company</h4><div class="footer-links"><a href="#about">About Us</a><a href="#solutions">Solutions</a><a href="#products">Products</a></div></div>
       <div><h4>Support</h4><div class="footer-links"><a href="#quote">Get a Quote</a><a href="#contact">Contact</a><a href="#calculator">Solar Savings</a></div></div>
-      <div><h4>Contact</h4><div class="footer-links"><a href="tel:+917830906631">Call Us</a><a href="#quote">WhatsApp</a><a href="#quote">Enquiry</a></div></div>
+      <div><h4>Contact</h4><div class="footer-links"><a href="tel:+917830906631">Call Us</a><a href="https://wa.me/919634889786" target="_blank" rel="noopener">WhatsApp</a><a href="#quote">Enquiry</a></div></div>
     </div>
     <div class="copyright">© 2026 Indian Solar. All rights reserved.</div>
   </div>
-<div class="footer-contact">📞 <a href="tel:+919634889786">+91 96348 89786</a> &nbsp; | &nbsp; ✉️ <a href="mailto:indiansolar366@gmail.com">indiansolar366@gmail.com</a></div>
+<div class="footer-contact">📞 <a href="tel:+917830906631">+91 96348 89786</a> &nbsp; | &nbsp; ✉️ <a href="mailto:indiansolar366@gmail.com">indiansolar366@gmail.com</a> &nbsp; | &nbsp; 💬 <a href="https://wa.me/919634889786" target="_blank" rel="noopener">WhatsApp</a></div>
 </footer>
 
 <script>
+function calculate(){
+  const bill=Math.max(0,Number(document.getElementById('bill').value)||0);
+  const low=Math.max(1,Math.round(bill/1200*10)/10);
+  const high=Math.max(1.5,Math.round(bill/900*10)/10);
+  document.getElementById('estimate').textContent=`Estimated system size: ${low}–${high} kW`;
+}
+
 function submitQuote(e){
   e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.trim().replace(/\D/g,'');
-  const city = document.getElementById('city').value.trim();
-  const bill = document.getElementById('quoteBill').value || 'Not provided';
-  const type = document.getElementById('type').value;
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim().replace(/\D/g,'');
+  const city=document.getElementById('city').value.trim();
+  const bill=document.getElementById('quoteBill').value || 'Not provided';
+  const type=document.getElementById('type').value;
 
   if(!/^[6-9]\d{9}$/.test(phone)){
     alert('Please enter a valid 10-digit Indian mobile number.');
     return false;
   }
 
-  const text =
-    'New Indian Solar Enquiry\n\n' +
+  const text='New Indian Solar Enquiry\n\n' +
     'Name: ' + name + '\n' +
     'Mobile: ' + phone + '\n' +
     'City: ' + city + '\n' +
     'Monthly Bill: ₹' + bill + '\n' +
     'Property Type: ' + type;
 
-  window.open(
-    'https://wa.me/919634889786?text=' + encodeURIComponent(text),
-    '_blank'
-  );
-
-  window.location.href =
-    'mailto:indiansolar366@gmail.com?subject=' +
-    encodeURIComponent('New Solar Enquiry - Indian Solar') +
-    '&body=' + encodeURIComponent(text);
-
+  window.open('https://wa.me/919634889786?text=' + encodeURIComponent(text), '_blank');
+  window.location.href='mailto:indiansolar366@gmail.com?subject=' +
+    encodeURIComponent('New Solar Enquiry - Indian Solar') + '&body=' + encodeURIComponent(text);
   return false;
 }
+
+calculate();
 </script>
 </body>
 </html>
